@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arieya Candra P</P></P></title>
+        <link rel="stylesheet" href="styleprice.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            function hitung(){
+                $(document).ready(function(){
+                    $("#submit").click(function(){
+                        let weight = $("#weight").val();
+                        let service = $("#service").val();
+                        let type = $("#type").val();
+                        let member = $("#member").val();
+
+                        if (weight == "") {
+                            alert("ISI BERAT TERLEBIH DAHULU!")
+                        } else {
+                            var price = [0, 1000, 1200, 900];
+                            var price1 = price[service] * weight;
+                            if (type == 2) {
+                                price1 += weight * 200;
+                                $("#totalprice").html(`Total price is : Rp.${price1}`);
+                            } else {
+                                $("#totalprice").html(`Total price is : Rp.${price1}`);
+                            }
+
+                            if (member == 2) {
+                                var diskon = price1 * 0.1;
+                                price1 -= diskon;
+                                $("#totaldiscount").html(`Total discount is : Rp.${diskon}`);
+                            }
+                            $("#totalpayment").html(`<b>Total payment is : Rp.${price1}</b>`);
+                            
+                        }
+
+                    });
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+            <p class="brand">Candra Laundry</p>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li class="active"><a href="pricecheck.html">Price Check</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+        </header>
+        <div class="price">
+        <div class="input">Input to Check The Price</div>
+        <table>
+            <tr>
+                <td>Weight <br><br></td>
+                <td> : <br><br></td>
+                <td><input type="text" name="var1" id="weight"><br><br></td>
+            </tr>
+            <tr>
+                <td>Service <br><br></td>
+                <td> : <br><br></td>
+                <td><select name="var2" id="service">
+                <option value="0">--PILIH SERVICE--</option>
+                <option value="1">Wash Dry</option>
+                <option value="2">Wash and Ironing</option>
+                <option value="3">Ironing Only</option>
+            </select><br><br></td>
+            </tr>
+            <tr>
+                <td>Type <br><br></td>
+                <td> : <br><br></td>
+                <td><select name="var3" id="type">
+                <option value="0">--PILIH SERVICE--</option>
+                <option value="1">Reguler</option>
+                <option value="2">Express</option>
+            </select><br><br></td>
+            </tr>
+            <tr>
+                <td>Membership <br><br></td>
+                <td> : <br><br></td>
+                <td><select name="var4" size="1" id="member">
+                <option value="0">--PILIH SERVICE--</option>
+                <option value="1">Non Member</option>
+                <option value="2">Member</option>
+            </select><br><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <button id="submit" onclick="hitung()" class="f">Check</button></td>
+            </tr>
+        </table>
+        <br>
+        <p id="totalprice"></p>
+        <p id="totaldiscount"></p>
+        <p id="totalpayment"></p>
+        </div>
+    <footer>
+        <div>
+            <p>Candra website</p>
+        </div>
+    </footer>
+    </body>
+</html>

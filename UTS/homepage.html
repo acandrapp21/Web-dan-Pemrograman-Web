@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arieya Candra P</title>
+        <link rel="stylesheet" href="stylehome.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            var i = 0;
+        var totalImages = 2; 
+
+            $(document).ready(function(){
+            $('.slidertitle, #slider img').hide(); 
+            $('#sliderImage1').show(); 
+            setInterval(showNextImage, 3000); 
+        });
+
+        function showNextImage(){
+            $('#sliderImage' + (i + 1)).fadeOut(1100); 
+            i = (i + 1) % totalImages; 
+            $('#sliderImage' + (i + 1)).fadeIn(1100); 
+        }
+            
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <p class="brand">Candra Laundry</p>
+                <ul>
+                    <li class="active"><a href="homepage.html">Home</a></li>
+                    <li><a href="pricecheck.html">Price check</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="slider">
+            <img id="sliderImage1"src="img/laundry3.png">
+            <img id="sliderImage2"src="img/laundry5.png">
+        </div>
+        <div class="konten">
+        <h1>Profile of Candra Laundry</h1><br>
+        <p>Candra Laundry adalah jasa laundry 24 jam pertama di Kabupaten Probolinggo
+            dengan tenaga ahli profesional untuk melayani anda!. Candra melayani cuci setrika baju.
+            Tidak hanya itu saja, disini juga melayani cuci selimut, boneka, seprei, dll.
+            Laundry ini juga menerima garansi selama H+24 jam setelah cucian anda bawa pulang.
+            Candra Laundry mempunyai alat yang lengkap, waktu yang efisien, dan siap melayani anda sekalian!
+            Mager Nyuci? Candra Laundry Solusinya!!!
+        </p>
+        </div>
+        <footer>
+            <div>
+                <p>Candra website</p>
+            </div>
+        </footer>
+    </body>
+</html>

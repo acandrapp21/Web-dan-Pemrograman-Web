@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arieya Candra P</title>
+        <link rel="stylesheet" href="stylelogin.css">
+        <script>
+        function validateForm(){
+            let a = document.forms["myForm"]["var1"].value;
+            let b = document.forms["myForm"]["var2"].value;
+            if (a == "" || b ==""){
+                alert("UUSERNAME DAN PASSWORD HARUS DIISI!");
+                return false;
+            }
+            if(b.length < 8){
+                alert("PASSWORD MINIMAL TERDIRI DARI 8 KARAKTER!");
+                return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">SELAMAT DATANG DI CANDRA LAUNDRY</div>
+        <div class="wrapper">
+            <div class="form">
+                <p><center>Yookk Login</center></p><br>
+                <form action="homepage.html" name="myForm" method="post" onsubmit="return validateForm()">
+                    <table>
+                        <tr>
+                            <td>Username<br><br></td>
+                            <td>:<br><br></td>
+                            <td><input type="text" name="var1" size="30" ><br><br></td>
+                        </tr>
+                        <tr>
+                            <td>Password<br><br></td>
+                            <td>:<br><br></td>
+                            <td><input type="password" name="var2" size="30"><br><br></td>
+                        </tr>
+                        <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Login" class="f"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
