@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center; /* Menempatkan konten di tengah secara horizontal */
+    align-items: center; /* Menempatkan konten di tengah secara vertikal */
+    height: 100vh; /* Mengatur tinggi halaman */
+    margin: 0; /* Menghilangkan margin default */
+    flex-direction: column; /* Mengatur orientasi menjadi kolom */
+    padding: 20px; /* Spasi di sekitar konten */
+    box-sizing: border-box; /* Memastikan padding dihitung dalam ukuran elemen */
+}
+
+/* Styling untuk link yang berfungsi sebagai tombol */
+.show-database {
+    border: 2px solid black; /* Border kotak di sekeliling tabel */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    background-color: #b1e181; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    text-decoration: none;
+    border-radius: 5px; 
+    margin-bottom: 20px; 
+    width: 100%; 
+    max-width: 400px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.show-database:hover {
+    background-color: #b1e181; 
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: 10px;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
